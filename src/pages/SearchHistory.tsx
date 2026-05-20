@@ -25,7 +25,7 @@ export default function SearchHistory() {
     return history.filter(
       (h) =>
         h.question.toLowerCase().includes(q) ||
-        h.results.some((r) => r.toLowerCase().includes(q)),
+        h.results.some((r) => r.question.toLowerCase().includes(q)),
     );
   }, [history, filter]);
 
